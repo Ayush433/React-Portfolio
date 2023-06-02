@@ -20,11 +20,9 @@ function App() {
         <Navbar />
         <Header />
         <Home />
-        <About />
-
-        <Contact />
-        <Work />
         <Services />
+        <Work />
+        <Contact />
       </h1>
     </>
   );

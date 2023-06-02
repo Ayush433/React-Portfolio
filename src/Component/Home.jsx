@@ -56,7 +56,7 @@ const Home = () => {
             consciousness in it. You can connect with me via social links.
           </p>
           <div className="flex justify-center items-center">
-            <button className="btn btn-lg m-6">
+            <button className="btn btn-lg mr-[60px]">
               <Link t0="" className="text-white">
                 Hire Me
               </Link>
