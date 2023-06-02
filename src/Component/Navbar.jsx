@@ -8,9 +8,9 @@ import { MdWork } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <nav className="fixed bottom-2 lg:bottom-1 w-full overflow-hidden z-50">
+    <nav className="fixed bottom-0 lg:bottom-2 w-full overflow-hidden z-50">
       <div className="container max-auto">
-        <div className=" flex w-full bg-black/20 h-[46px] backdrop-blur-2xl rounded-full max-w-[360px] px-5 justify-between text-2xl text-white/50  items-center  m-auto ml-[500px]">
+        <div className="flex w-full bg-black/20 h-[46px] backdrop-blur-2xl rounded-full max-w-[360px] px-5 justify-between text-2xl text-white/50 items-center m-auto lg:ml-[500px]">
           <Link
             to="home"
             className="cursor-pointer"
@@ -22,7 +22,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="contact"
-            className="cursor-pointer "
+            className="cursor-pointer"
             smooth={true}
             duration={500}
           >
@@ -30,7 +30,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="about"
-            className="cursor-pointer "
+            className="cursor-pointer"
             smooth={true}
             duration={500}
           >
@@ -45,9 +45,6 @@ const Navbar = () => {
           >
             <MdWork />
           </Link>
-          {/* <Link to = "" className="cursor-pointer">
-            <FcContacts />
-          </Link> */}
           <Link
             to="work"
             className="cursor-pointer"

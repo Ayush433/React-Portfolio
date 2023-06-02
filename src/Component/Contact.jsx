@@ -12,7 +12,7 @@ const Contact = () => {
         Reach me out{" "}
       </h1>
 
-      <div className="grid grid-cols-3 gap-y-9 gap-x-6 my-7  justify-center mb-[6rem] md:grid-cols-5 md:gap-x-7 ">
+      <div className="grid grid-cols-2 gap-y-9 gap-x-6 my-7  justify-center mb-[6rem] md:grid-cols-5 md:gap-x-7 ">
         <div className="text-center">
           <Link>
             <BsFacebook
