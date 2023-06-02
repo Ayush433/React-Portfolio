@@ -13,7 +13,7 @@ const Home = () => {
   };
   return (
     <div className="mb-[50px]" id="home">
-      <div className="grid grid-cols-2 items-center p-[2%]">
+      <div className="grid grid-cols-1 items-center p-[2%] md:grid-cols-2">
         <div className="h-[550px]">
           <lottie-player
             src="https://assets2.lottiefiles.com/packages/lf20_kkflmtur.json"
@@ -24,7 +24,9 @@ const Home = () => {
           ></lottie-player>
         </div>
         <div>
-          <h1 className="text-4xl font-bold">Hi My Name is Ayush</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-[20px]">
+            Hi My Name is Ayush
+          </h1>
           <h2 className="py-2 text-black font-bold text-2xl">
             <TypeAnimation
               sequence={[
@@ -55,8 +57,8 @@ const Home = () => {
             <br /> <br />I believe everything is an Art when you put your
             consciousness in it. You can connect with me via social links.
           </p>
-          <div className="flex justify-center items-center">
-            <button className="btn btn-lg mr-[60px]">
+          <div className="flex justify-center items-center mt-7 ">
+            <button className="btn btn-lg mr-[30px]  ">
               <Link t0="" className="text-white">
                 Hire Me
               </Link>

@@ -7,7 +7,7 @@ const Services = () => {
     <div>
       <h1 className="text-center font-bold text-4xl">Technology I Use</h1>
 
-      <div className="grid grid-cols-4 my-7 gap-y-7 technology">
+      <div className="grid grid-cols-2 my-7 gap-y-7 technology md:grid-cols-4">
         <div className="text-center">
           <FaReact
             className="w-full hover:text-rose-500 hover:scale-105 transition-all animate-bounce"

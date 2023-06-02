@@ -12,11 +12,11 @@ const Contact = () => {
         Reach me out{" "}
       </h1>
 
-      <div className="grid grid-cols-5 my-7 gap-y-4 gap-x-[-10px] technology justify-center mb-[6rem] ">
+      <div className="grid grid-cols-3  gap-y-9 gap-x-6 my-7 technology justify-center mb-[6rem] md:grid-cols-5 ">
         <div className="text-center">
           <Link>
             <BsFacebook
-              className="w-full hover:text-blue-700 hover:scale-105 transition-all animate-bounce cursor-pointer "
+              className="w-full hover:text-blue-700 hover:scale-105 transition-all  cursor-pointer "
               size={80}
               to="https://www.facebook.com/adhikariayush12/"
               title="React"
