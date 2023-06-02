@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="mb-[50px]" id="home">
       <div className="grid grid-cols-1 items-center p-[2%] md:grid-cols-2">
-        <div className="h-[550px]">
+        <div className="h-[400px] md:h-[600px]">
           <lottie-player
             src="https://assets2.lottiefiles.com/packages/lf20_kkflmtur.json"
             background="transparent"
