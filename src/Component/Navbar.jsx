@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { FcHome } from "react-icons/fc";
-import { FcContacts } from "react-icons/fc";
+import { AiFillHome } from "react-icons/ai";
+import { RiContactsFill } from "react-icons/ri";
 import { FaUserTie } from "react-icons/fa";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { MdWork } from "react-icons/md";
@@ -18,15 +18,7 @@ const Navbar = () => {
             duration={500}
             offset={-200}
           >
-            <FcHome />
-          </Link>
-          <Link
-            to="contact"
-            className="cursor-pointer"
-            smooth={true}
-            duration={500}
-          >
-            <FcContacts />
+            <AiFillHome size={30} />
           </Link>
           <Link
             to="about"
@@ -36,6 +28,15 @@ const Navbar = () => {
           >
             <FaUserTie />
           </Link>
+          <Link
+            to="contact"
+            className="cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            <RiContactsFill />
+          </Link>
+
           <Link
             to="services"
             className="cursor-pointer"

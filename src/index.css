@@ -39,6 +39,9 @@
   padding: 1rem;
   border-radius: 100%;
 }
+.icon-container:hover svg {
+  color: white;
+}
 
 @layer base {
   body {
