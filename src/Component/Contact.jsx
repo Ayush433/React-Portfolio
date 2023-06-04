@@ -26,11 +26,12 @@ const Contact = ({ handleFormSubmit }) => {
           {
             from_name: values.name,
             from_email: values.email,
-            message: values.message,
+            from_message: values.message,
           },
           "D3MuP7iYpbh27MCpj"
         );
         handleFormSubmit();
+        console.log(values);
         action.resetForm();
       } catch (error) {
         console.error("An error occurred while sending the email:", error);
@@ -112,7 +113,7 @@ const Contact = ({ handleFormSubmit }) => {
                 className="
                   text-black
                   font-bold
-                  text-2xl
+                  text-xl
                   block
                   w-full
                   mt-1
