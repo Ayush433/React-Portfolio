@@ -6,10 +6,13 @@ const Work = () => {
     window.open("https://github.com/Ayush433?tab=repositories");
   };
   return (
-    <section className="pt-[70px]" id="work">
+    <section className="pt-[70px]">
       <div className="container mx-auto ">
         <div>
-          <h2 className=" h2 text-white font-bold items-center md:text-center">
+          <h2
+            className=" h2 text-white font-bold items-center md:text-center"
+            id="work"
+          >
             My Latest Work
           </h2>
           <div className="mb-5">
@@ -18,12 +21,12 @@ const Work = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-x-8 gap-y-4 lg:gap-y-12">
+        <div className="flex flex-col lg:flex-row gap-x-5 gap-y-4 lg:gap-y-12">
           <div className="">
-            <div className="group relative overflow-hidden border-4 border-white/50 rounded-xl ">
+            <div className="group relative overflow-hidden border-4 border-white/50 rounded-xl">
               <div className="group-hover:bg-black/70  w-full h-full absolute transition-all duration-300 z-40"></div>
               <img
-                src="/portfolio-img1.png"
+                src="/portfolio.png"
                 className="group-hover:scale-100 transition-all duration-500"
                 alt="image "
               />

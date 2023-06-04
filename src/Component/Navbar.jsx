@@ -20,25 +20,9 @@ const Navbar = () => {
           >
             <AiFillHome size={30} />
           </Link>
-          <Link
-            to="about"
-            className="cursor-pointer"
-            smooth={true}
-            duration={500}
-          >
-            <FaUserTie />
-          </Link>
-          <Link
-            to="contact"
-            className="cursor-pointer"
-            smooth={true}
-            duration={500}
-          >
-            <RiContactsFill />
-          </Link>
 
           <Link
-            to="services"
+            to="work"
             className="cursor-pointer"
             smooth={true}
             duration={500}
@@ -47,7 +31,15 @@ const Navbar = () => {
             <MdWork />
           </Link>
           <Link
-            to="work"
+            to="contact"
+            className="cursor-pointer"
+            smooth={true}
+            duration={500}
+          >
+            <FaUserTie />
+          </Link>
+          <Link
+            to="services"
             className="cursor-pointer"
             smooth={true}
             duration={500}

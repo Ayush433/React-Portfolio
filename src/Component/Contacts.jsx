@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
 
-const Contact = ({ handleFormSubmit }) => {
+const Contacts = ({ handleFormSubmit }) => {
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -40,7 +40,6 @@ const Contact = ({ handleFormSubmit }) => {
 
   return (
     <div className="pb-[30px] mb-6">
-      <h1 className="text-center font-bold text-4xl pb-7">Contact Me</h1>
       <div className="w-full md:w-96 md:max-w-full mx-auto">
         <div className="p-3 border border-gray-300 sm:rounded-md">
           <form onSubmit={formik.handleSubmit}>
@@ -155,4 +154,4 @@ const Contact = ({ handleFormSubmit }) => {
   );
 };
 
-export default Contact;
+export default Contacts;

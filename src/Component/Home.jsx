@@ -1,5 +1,5 @@
 import { MotionConfig } from "framer-motion";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
@@ -15,12 +15,25 @@ const Home = () => {
     downloadLink.click();
   };
   const [showForm, setShowForm] = useState(false);
+  const formRef = useRef(null);
   const handleContactClick = () => {
     setShowForm(true);
   };
   const handleFormSubmit = () => {
     setShowForm(false);
   };
+  const handleClickOutside = (event) => {
+    if (formRef.current && !formRef.current.contains(event.target)) {
+      setShowForm(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className="mb-[50px]" id="home">
       <div className="grid grid-cols-1 items-center p-[2%] md:grid-cols-2">
@@ -42,9 +55,9 @@ const Home = () => {
               sequence={[
                 "React", // Types 'One'
                 2000, // Waits 1s
-                "Node js", // Deletes 'One' and types 'Two'
+                "Node Js", // Deletes 'One' and types 'Two'
                 2000, // Waits 2s
-                "React Nodejs, Developer",
+                "MERN Developer",
                 4000, // Types 'Three' without deleting 'Two'
               ]}
               wrapper="span"
@@ -58,7 +71,7 @@ const Home = () => {
             />
           </h2>
           <p>
-            I'm a front-end developer located in Nepal. I love to create simple
+            I'm a full stack developer located in Nepal. I love to create simple
             yet beautiful websites with great user experience.
             <br /> <br />
             I'm interested in the whole frontend stack Like trying new things
@@ -81,11 +94,13 @@ const Home = () => {
       </div>
       {showForm && (
         <div className="contact-form-overlay">
-          {showForm ? (
-            <Contact handleFormSubmit={handleFormSubmit} />
-          ) : (
-            <div>Thank you for submitting the form!</div>
-          )}
+          <div ref={formRef}>
+            {showForm ? (
+              <Contact handleFormSubmit={handleFormSubmit} />
+            ) : (
+              <div>Thank you for submitting the form!</div>
+            )}
+          </div>
         </div>
       )}
     </div>

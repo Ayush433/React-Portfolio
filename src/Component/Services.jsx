@@ -7,7 +7,9 @@ import { TbBrandRedux } from "react-icons/tb";
 const Services = () => {
   return (
     <div>
-      <h1 className="text-center font-bold text-4xl pb-7">Technology I Use</h1>
+      <h1 className="text-center font-bold text-4xl pb-7" id="services">
+        Technology I Use
+      </h1>
 
       <div className="grid grid-cols-2 my-7 gap-y-7 technology md:grid-cols-4 md:gap-x-0 md:gap-y-7">
         <div className="text-center">
