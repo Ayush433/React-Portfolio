@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <div className="p-9 " id="contact">
       <h1 className="text-center font-bold text-4xl mt-[2rem] mb-[4rem]">
-        Reach me out{" "}
+        Reach out to me{" "}
       </h1>
 
       <div className="grid grid-cols-1 gap-y-8 gap-x-6 my-7  justify-center mb-[7rem] md:grid-cols-2 md:gap-x-1 md:gap-y-0 ">
