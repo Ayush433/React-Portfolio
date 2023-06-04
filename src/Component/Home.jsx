@@ -1,8 +1,10 @@
 import { MotionConfig } from "framer-motion";
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
 import CvPdf from "../assets/ Cv.pdf";
+import Contact from "./Contact";
 
 const Home = () => {
   const handleDownloadCv = () => {
@@ -11,6 +13,13 @@ const Home = () => {
     downloadLink.href = CvPdf;
     downloadLink.download = "Cv.pdf"; // Optional: Specify the filename for the downloaded file
     downloadLink.click();
+  };
+  const [showForm, setShowForm] = useState(false);
+  const handleContactClick = () => {
+    setShowForm(true);
+  };
+  const handleFormSubmit = () => {
+    setShowForm(false);
   };
   return (
     <div className="mb-[50px]" id="home">
@@ -60,7 +69,7 @@ const Home = () => {
           </p>
           <div className="flex justify-center items-center mt-7 ">
             <button className="btn btn-lg mr-[30px]  ">
-              <Link t0="" className="text-white">
+              <Link t0="" className="text-white" onClick={handleContactClick}>
                 Hire Me
               </Link>
             </button>
@@ -70,6 +79,15 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {showForm && (
+        <div className="contact-form-overlay">
+          {showForm ? (
+            <Contact handleFormSubmit={handleFormSubmit} />
+          ) : (
+            <div>Thank you for submitting the form!</div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

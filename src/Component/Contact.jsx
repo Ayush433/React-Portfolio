@@ -1,83 +1,138 @@
 import React from "react";
-import { BsFacebook } from "react-icons/bs";
-import { FaInstagramSquare, FaGithub } from "react-icons/fa";
-import { GrLinkedin } from "react-icons/gr";
-import { SiGmail } from "react-icons/si";
-import { Link } from "react-scroll";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
-const Contact = () => {
-  const handleClick = () => {
-    window.open("https://www.facebook.com/adhikariayush12/", "blank");
-  };
-  const clickInstagram = () => {
-    window.open("https://www.instagram.com/ig_ayushadh/", "blank");
-  };
-  const handleGmail = () => {
-    const email = "adhikariayush19@gmail.com";
-    const subject = "Regarding your inquiry";
-    const body = "";
-    const gmailUrl = `mailto:${email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.open(gmailUrl);
-  };
-  const handleLinkedin = () => {
-    window.open("https://www.linkedin.com/in/ayush-adhikari-9b3273222/");
-  };
-  const handleGithub = () => {
-    window.open("https://github.com/Ayush433");
-  };
+const Contact = ({ handleFormSubmit }) => {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      name: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email("Invalid email address").required("Required"),
+      name: Yup.string()
+        .min(8, "Name must be at least 8 characters")
+        .required("Required"),
+      message: Yup.string().required("Message is Required"),
+    }),
+    onSubmit: async (values, action) => {
+      handleFormSubmit();
+      action.resetForm();
+    },
+  });
+
   return (
-    <div className="p-9 " id="contact">
-      <h1 className="text-center font-bold text-4xl mt-[2rem] mb-[4rem]">
-        Reach me out{" "}
-      </h1>
-
-      <div className="grid grid-cols-3 gap-y-9 gap-x-6 my-7  justify-center mb-[6rem] md:grid-cols-5 md:gap-x-7 ">
-        <div className="text-center">
-          <Link>
-            <BsFacebook
-              className="w-full hover:text-blue-700 text-blue-500 hover:scale-105 transition-all  cursor-pointer"
-              size={50}
-              title="React"
-              onClick={handleClick}
-            />
-          </Link>
-        </div>
-
-        <div className="text-center">
-          <FaInstagramSquare
-            className="w-full hover:text-pink-500 hover:scale-105 text-[#C13584] transition-all cursor-pointer"
-            size={50}
-            title="Instagram"
-            onClick={clickInstagram}
-          />
-        </div>
-
-        <div className="text-center">
-          <FaGithub
-            className="w-full hover:text-[#334155] text-[#475569] hover:scale-105 transition-all cursor-pointer"
-            size={50}
-            title="Github"
-            onClick={handleGithub}
-          />
-        </div>
-        <div className="text-center">
-          <SiGmail
-            className="w-full hover:text-red-500 text-red-600 hover:scale-105 transition-all cursor-pointer"
-            size={50}
-            title="gmail"
-            onClick={handleGmail}
-          />
-        </div>
-
-        <div className="text-center">
-          <GrLinkedin
-            className="w-full hover:text-blue-600 text-blue-600 hover:scale-105 transition-all cursor-pointer"
-            size={50}
-            title="Linkedin"
-            onClick={handleLinkedin}
-          />
+    <div className="pb-[80px] mb-10">
+      <h1 className="text-center font-bold text-4xl pb-7">Contact Me</h1>
+      <div className="w-full md:w-96 md:max-w-full mx-auto">
+        <div className="p-6 border border-gray-300 sm:rounded-md">
+          <form onSubmit={formik.handleSubmit}>
+            <label className="block mb-6">
+              <span className="text-white">Your name</span>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className="
+                  block
+                  w-full
+                  text-black
+                  font-bold
+                  text-2xl
+                  mt-1
+                  border-gray-300
+                  rounded-md
+                  shadow-sm
+                  focus:border-indigo-300
+                  focus:ring
+                  focus:ring-indigo-200
+                  focus:ring-opacity-50
+                "
+                placeholder="Joe Bloggs"
+                onChange={formik.handleChange}
+                value={formik.values.name}
+              />
+              {formik.errors.name && formik.touched.name ? (
+                <h1 className="text-pink-700">{formik.errors.name}</h1>
+              ) : (
+                ""
+              )}
+            </label>
+            <label className="block mb-6">
+              <span className="text-white">Email address</span>
+              <input
+                name="email"
+                type="email"
+                className="
+                  block
+                  w-full
+                  font-bold
+                  text-2xl
+                  text-black
+                  mt-1
+                  border-gray-300
+                  rounded-md
+                  shadow-sm
+                  focus:border-indigo-300
+                  focus:ring
+                  focus:ring-indigo-200
+                  focus:ring-opacity-50
+                "
+                placeholder="joe.bloggs@example.com"
+                onChange={formik.handleChange}
+                value={formik.values.email}
+              />
+              {formik.errors.email && formik.touched.email ? (
+                <h1 className="text-pink-700">{formik.errors.email}</h1>
+              ) : (
+                ""
+              )}
+            </label>
+            <label className="block mb-6">
+              <span className="text-white">Message</span>
+              <textarea
+                name="message"
+                className="
+                  text-black
+                  font-bold
+                  text-2xl
+                  block
+                  w-full
+                  mt-1
+                  border-gray-300
+                  rounded-md
+                  shadow-sm
+                  focus:border-indigo-300
+                  focus:ring
+                  focus:ring-indigo-200
+                  focus:ring-opacity-50
+                "
+                rows="3"
+                placeholder="Tell us what you're thinking about..."
+                onChange={formik.handleChange}
+                value={formik.values.message}
+              ></textarea>
+            </label>
+            <div className="mb-6">
+              <button
+                type="submit"
+                className="
+                  h-10
+                  px-5
+                  text-indigo-100
+                  bg-indigo-700
+                  rounded-lg
+                  transition-colors
+                  duration-150
+                  focus:shadow-outline
+                  hover:bg-indigo-800
+                "
+              >
+                Contact Us
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

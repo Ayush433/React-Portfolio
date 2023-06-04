@@ -27,16 +27,16 @@ const Work = () => {
                 className="group-hover:scale-100 transition-all duration-500"
                 alt="image "
               />
-              <div className="absolute -bottom-full ml-[95px] group-hover:bottom-20 transition-all duration-500 z-50">
+              <div className="absolute -bottom-full ml-[95px] group-hover:bottom-10  transition-all duration-500 z-50">
                 <div className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer ">
-                  <span className="font-bold ml-6"> View</span>
+                  <span className="font-bold ml-6"> Views</span>
                   <AiOutlineEye
                     size={30}
                     className="w-full text-[#a147f4] hover:scale-105 transition-all"
                   />
                 </div>
                 <span className="text-white font-semibold text-center mt-10  ">
-                  View Source Code{" "}
+                  View Live Movie
                 </span>
               </div>
             </div>
@@ -50,7 +50,7 @@ const Work = () => {
                 className="group-hover:scale-100 transition-all duration-500"
                 alt="image "
               />
-              <div className="absolute -bottom-full ml-[95px] group-hover:bottom-20 transition-all duration-500 z-50">
+              <div className="absolute -bottom-full ml-[95px] group-hover:bottom-10 transition-all duration-500 z-50">
                 <div className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer ">
                   <span className="font-bold ml-6">View</span>
                   <AiOutlineEye
@@ -59,7 +59,7 @@ const Work = () => {
                   />
                 </div>
                 <span className="text-white font-semibold text-center mt-10  ">
-                  View Source Code{" "}
+                  View Live Blogs
                 </span>
               </div>
             </div>
@@ -71,7 +71,7 @@ const Work = () => {
                   className="group-hover:scale-100 transition-all duration-500"
                   alt="image "
                 />
-                <div className="absolute -bottom-full ml-[95px] group-hover:bottom-20 transition-all duration-500 z-50 ">
+                <div className="absolute -bottom-full ml-[95px] group-hover:bottom-10 transition-all duration-500 z-50 ">
                   <div className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer ">
                     <span className="font-bold ml-6">View</span>
                     <AiOutlineEye
@@ -80,7 +80,7 @@ const Work = () => {
                     />
                   </div>
                   <span className="text-white font-semibold text-center mt-10  ">
-                    View Live Project
+                    View Live Portfolio
                   </span>
                 </div>
               </div>

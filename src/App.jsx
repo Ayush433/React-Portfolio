@@ -8,8 +8,9 @@ import Header from "./Component/Header";
 import Navbar from "./Component/Navbar";
 import Work from "./Component/Work";
 import Services from "./Component/Services";
-import Contact from "./Component/Contact";
+import Contact from "./Component/ReachMe";
 import { BrowserRouter } from "react-router-dom";
+import ReachMe from "./Component/ReachMe";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,7 +23,7 @@ function App() {
         <Home />
         <Services />
         <Work />
-        <Contact />
+        <ReachMe />
       </h1>
     </>
   );
