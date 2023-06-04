@@ -38,7 +38,7 @@ const Contact = () => {
         <div className="">
           <Contacts />
         </div>
-        <div className="grid grid-cols-3 gap-y-8 md:grid-cols-3">
+        <div className="grid grid-cols-3 gap-y-8 md:grid-cols-3 md:gap-y-[0px]">
           <div className="text-center">
             <Link>
               <BsFacebook

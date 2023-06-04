@@ -71,14 +71,18 @@ const Home = () => {
             />
           </h2>
           <p>
-            I'm a full stack developer located in Nepal. I love to create simple
-            yet beautiful websites with great user experience.
+            I am a full-stack developer based in Nepal. I have a strong passion
+            for designing elegant websites that provide exceptional user
+            experiences.
             <br /> <br />
-            I'm interested in the whole frontend stack Like trying new things
-            and building great projects. I'm an independent freelancer and
-            blogger. I love to write blogs and read books.
-            <br /> <br />I believe everything is an Art when you put your
-            consciousness in it. You can connect with me via social links.
+            I am particularly enthusiastic about exploring various aspects of
+            the frontend stack and embarking on exciting projects. As an
+            autonomous freelancer and blogger, I take pleasure in crafting
+            engaging blog posts and indulging in literary works.
+            <br /> <br />
+            In my perspective, every endeavor becomes an art when infused with
+            conscious effort. If you wish to get in touch, feel free to connect
+            with me through my social media channels.
           </p>
           <div className="flex justify-center items-center mt-7 ">
             <button className="btn btn-lg mr-[30px]  ">
