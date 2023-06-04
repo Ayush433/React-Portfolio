@@ -71,8 +71,8 @@ const Home = () => {
             />
           </h2>
           <p>
-            I am a full-stack developer based in Nepal. I have a strong passion
-            for designing elegant websites that provide exceptional user
+            I am a full-stack developer from Nepal. I have a strong passion for
+            designing elegant websites that provide exceptional user
             experiences.
             <br /> <br />
             I am particularly enthusiastic about exploring various aspects of
