@@ -26,7 +26,7 @@ const Contacts = ({ handleFormSubmit }) => {
           {
             from_name: values.name,
             from_email: values.email,
-            message: values.message,
+            from_message: values.message,
           },
           "D3MuP7iYpbh27MCpj"
         );
