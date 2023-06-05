@@ -5,6 +5,12 @@ const Work = () => {
   const handleClick = () => {
     window.open("https://github.com/Ayush433?tab=repositories");
   };
+  const handleBlog = () => {
+    window.open("https://github.com/Ayush433/Backend");
+  };
+  const handlePortfolio = () => {
+    window.open("https://adhikariayush.com.np");
+  };
   return (
     <section className="pt-[70px]">
       <div className="container mx-auto ">
@@ -54,14 +60,17 @@ const Work = () => {
                 alt="image "
               />
               <div className="absolute -bottom-full ml-[95px] group-hover:bottom-10 transition-all duration-500 z-50">
-                <div className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer ">
+                <div
+                  onClick={handleBlog}
+                  className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer "
+                >
                   <span className="font-bold ml-6">View</span>
                   <AiOutlineEye
                     size={30}
                     className="w-full text-[#a147f4] hover:scale-105 transition-all"
                   />
                 </div>
-                <span className="text-white font-semibold text-center mt-10  ">
+                <span className="text-white font-semibold text-center mt-10">
                   View Live Blogs
                 </span>
               </div>
@@ -75,7 +84,10 @@ const Work = () => {
                   alt="image "
                 />
                 <div className="absolute -bottom-full ml-[95px] group-hover:bottom-10 transition-all duration-500 z-50 ">
-                  <div className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer ">
+                  <div
+                    className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer"
+                    onClick={handlePortfolio}
+                  >
                     <span className="font-bold ml-6">View</span>
                     <AiOutlineEye
                       size={30}
