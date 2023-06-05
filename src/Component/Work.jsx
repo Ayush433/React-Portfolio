@@ -37,7 +37,10 @@ const Work = () => {
                 alt="image "
               />
               <div className="absolute -bottom-full ml-[95px] group-hover:bottom-10  transition-all duration-500 z-50">
-                <div className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer ">
+                <div
+                  className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer "
+                  onClick={handlePortfolio}
+                >
                   <span className="font-bold ml-6"> Views</span>
                   <AiOutlineEye
                     size={30}
@@ -45,7 +48,7 @@ const Work = () => {
                   />
                 </div>
                 <span className="text-white font-semibold text-center mt-10  ">
-                  View Live Movie
+                  View Live Portfolio
                 </span>
               </div>
             </div>
@@ -84,10 +87,7 @@ const Work = () => {
                   alt="image "
                 />
                 <div className="absolute -bottom-full ml-[95px] group-hover:bottom-10 transition-all duration-500 z-50 ">
-                  <div
-                    className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer"
-                    onClick={handlePortfolio}
-                  >
+                  <div className="bg-[#3a2a46] border-2 rounded-2xl flex cursor-pointer">
                     <span className="font-bold ml-6">View</span>
                     <AiOutlineEye
                       size={30}
@@ -95,7 +95,7 @@ const Work = () => {
                     />
                   </div>
                   <span className="text-white font-semibold text-center mt-10  ">
-                    View Live Portfolio
+                    View Movie
                   </span>
                 </div>
               </div>
