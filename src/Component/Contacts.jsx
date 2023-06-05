@@ -9,7 +9,7 @@ const Contacts = ({ handleFormSubmit }) => {
       email: "",
       name: "",
       message:
-        "Hi Ayush, I am [Your Name] from [Company Name]. After examining your portfolio, we are pleased to notify you that we have a great opportunity for you.To discuss this matter further, we would like to schedule a meeting with you.Are you available on [Day, Date] at [Time, Time Zone]? Please reply to this email and let me know if you are available at that time. Regards,[Your Name]",
+        "Hi Ayush, I am [Your Name] , from [Company Name]. After examining your portfolio, we are pleased to notify you that we have a great opportunity for you.To discuss this matter further, we would like to schedule a meeting with you.Are you available on [Day, Date] at [Time, Time Zone]? Please reply to this email and let me know if you are available at that time. Regards,[Your Name]",
     },
     validationSchema: Yup.object({
       email: Yup.string().email("Invalid email address").required("Required"),
