@@ -8,10 +8,9 @@ import Contact from "./Contact";
 
 const Home = () => {
   const handleDownloadCv = () => {
-    // Replace "link_to_cv.pdf" with the actual URL or file path of your CV file
     const downloadLink = document.createElement("a");
     downloadLink.href = CvPdf;
-    downloadLink.download = "Cv.pdf"; // Optional: Specify the filename for the downloaded file
+    downloadLink.download = "Cv-A.pdf";
     downloadLink.click();
   };
   const [showForm, setShowForm] = useState(false);
