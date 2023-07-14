@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 const Contacts = ({ handleFormSubmit }) => {
   const formik = useFormik({
@@ -18,7 +19,7 @@ const Contacts = ({ handleFormSubmit }) => {
         .required("Required"),
       message: Yup.string().required("Message is Required"),
     }),
-    onSubmit: async (values, action) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
         await emailjs.send(
           "service_tunrpxs",
@@ -30,8 +31,19 @@ const Contacts = ({ handleFormSubmit }) => {
           },
           "D3MuP7iYpbh27MCpj"
         );
-        handleFormSubmit();
-        action.resetForm();
+
+        toast.success("Form Submitted Successfully", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        // console.log(values);
+        resetForm();
       } catch (error) {
         console.error("An error occurred while sending the email:", error);
       }

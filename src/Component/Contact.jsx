@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 const Contact = ({ handleFormSubmit }) => {
   const formik = useFormik({
@@ -30,8 +31,19 @@ const Contact = ({ handleFormSubmit }) => {
           },
           "D3MuP7iYpbh27MCpj"
         );
+
         handleFormSubmit();
-        console.log(values);
+        toast.success("Successfully Send", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        // console.log(values);
         action.resetForm();
       } catch (error) {
         console.error("An error occurred while sending the email:", error);
