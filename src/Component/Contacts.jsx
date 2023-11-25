@@ -32,7 +32,7 @@ const Contacts = ({ handleFormSubmit }) => {
           "D3MuP7iYpbh27MCpj"
         );
 
-        toast.success("Form Submitted Successfully", {
+        toast.success("Form Submitted", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
